@@ -7,115 +7,156 @@
     <link rel="stylesheet" href="./landingpage.css" />
     <title>Receitinhas</title>
   </head>
-  <body>
-    <main>
-      <header>
-        <ul>
-          <li><a href="#receita1">Receita 1</a></li>
-          <li><a href="#receita2">Receita 2</a></li>
-          <li><a href="#suareceita">A sua Receita</a></li>
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <main class="max-w-5xl mx-auto">
+    <header class="bg-white shadow-md p-4 top-0 z-50">
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <h1 class="text-xl md:text-2xl font-bold text-blue-500">
+      Receitinhas
+    </h1>
+    <div class="flex items-center gap-6">
+      <nav>
+        <ul class="hidden md:flex gap-6 text-lg items-center">
+          <li>
+            <a href="#receita1" class="hover:text-blue-500 transition">
+              Receita 1
+            </a>
+          </li>
+          <li>
+            <a href="#receita2" class="hover:text-blue-500 transition">
+              Receita 2
+            </a>
+          </li>
         </ul>
-      </header>
-      <section id="intro" class="center">
-        <div>
-          <h1>Introdução</h1>
-          <p>
-            Meu nome é Mario Filho, fiz essa landing page para compartilhar
-            algumas receitas que aprendi. Além de ser aluno full stack no
-            digital college, eu fiz um curso de padeiro no SENAI e trabalhei na
-            industria de alimentos como auxiliar de produção, no entanto as
-            receitas aqui são as que eu já sabia, mas mesmo assim espero que
-            tente faze-las em casa.
+      </nav>
+      <a href="#suareceita"
+        class="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition">
+        Enviar Receita
+      </a>
+    </div>
+  </div>
+</header>
+
+      <section id="intro" class="flex items-center justify-center min-h-[60vh] px-6 text-center">
+        <div class="max-w-2xl">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">Introdução</h1>
+          <p class="text-lg leading-relaxed">
+            Meu nome é Mario Filho, fiz essa landing page para compartilhar algumas receitas que aprendi. Além de ser aluno full stack no digital college, eu fiz um curso de padeiro no SENAI e trabalhei na industria de alimentos como auxiliar de produção, no entanto as receitas aqui são as que eu já sabia, mas mesmo assim espero que tente faze-las em casa.
           </p>
         </div>
       </section>
-      <section id="receita1" class="mx-12">
-        <div>
-          <div>
-            <img src="./assets/mass1.jpg" alt="massa1" />
-            <img src="./assets/mass2.jpg" alt="massa2" />
-            <img src="./assets/mass3.jpg" alt="massa3" />
+<section id="receita1" class="px-6 py-10">
+  <div class="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-6 items-center">
+    <div class="md:w-1/2 w-full">
+      <div class="relative">
+        <button onclick="prevSlide()" 
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full z-10">
+          ←
+        </button>
+        <div class="overflow-hidden rounded-lg">
+          
+          <div id="carousel" class="flex transition-transform duration-500">
+            <img src="./assets/mass1.jpg" class="w-full flex-shrink-0" />
+            <img src="./assets/mass2.jpg" class="w-full flex-shrink-0" />
+            <img src="./assets/mass3.jpg" class="w-full flex-shrink-0" />
           </div>
-          <h1>Receita 1: Massa de torta</h1>
-          <h2>Igredientes</h2>
-          <ul>
-            2 Xicaras de farinha de trigo
-          </ul>
-          <ul>
-            1/2 colher de chá de sal
-          </ul>
-          <ul>
-            1 colher de chá de açucar
-          </ul>
-          <ul>
-            2 colheres de sopa de manteiga
-          </ul>
-          <ul>
-            Agua morna
-          </ul>
-          <p>
-            Uma massa simples e rapida de fazer, pode ser modelada de varias
-            formas, dependendo da quantidade de manteiga, pode ficar como massa
-            de empada, ou massa podre, como é conhecida popurlamente.
-          </p>
-          <h2>Modo de fazer</h2>
-          <p>
-            Misture a farinha, sal e açucar antes de adicionar a manteiga, voce
-            pode derreter se quiser, misture a agua morna até ter uma massa que
-            não grude nas mãos
-          </p>
-          <h2>Preparo</h2>
-          <p>
-            Agora é só abrir a massa na forma que quiser, recheio a gosto,
-            normalmente eu faço de queijo e presunto, se quiser pode fazer uma
-            tampa e pincelar com gema de ovo para uma torta tradicional, ou
-            deixar aberta como um quiche, também serve para fazer num formato de
-            petit four. Asse no forno pr=e-aquecido a 200 °C por 15 a 20
-            minutos, dependendo do seu gosto.
-          </p>
         </div>
+        <button onclick="nextSlide()" 
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full z-10">
+          →
+        </button>
+      </div>
+    </div>
+    <div class="md:w-1/2 w-full">
+      <h1 class="text-2xl md:text-3xl font-bold mb-4">
+        Receita 1: Massa de torta
+      </h1>
+      <h2 class="font-semibold text-xl">Ingredientes</h2>
+      <ul class="list-disc ml-6 space-y-1 mb-4">
+        <li>2 Xicaras de farinha de trigo</li>
+        <li>1/2 colher de chá de sal</li>
+        <li>1 colher de chá de açucar</li>
+        <li>2 colheres de sopa de manteiga</li>
+        <li>Agua morna</li>
+      </ul>
+      <p class="mb-3">
+        Uma massa simples e rapida de fazer, pode ser modelada de varias formas, dependendo da quantidade de manteiga, pode ficar como massa de empada, ou massa podre, como é conhecida popurlamente.
+      </p>
+      <h2 class="font-semibold text-xl">Modo de fazer</h2>
+      <p class="mb-3">
+        Misture a farinha, sal e açucar antes de adicionar a manteiga, voce pode derreter se quiser, misture a agua morna até ter uma massa que não grude nas mãos
+      </p>
+      <h2 class="font-semibold text-xl">Preparo</h2>
+      <p>
+        Agora é só abrir a massa na forma que quiser, recheio a gosto, normalmente eu faço de queijo e presunto, se quiser pode fazer uma tampa e pincelar com gema de ovo para uma torta tradicional, ou deixar aberta como um quiche, também serve para fazer num formato de petit four. Asse no forno pr=e-aquecido a 200 °C por 15 a 20 minutos, dependendo do seu gosto.
+      </p>
+    </div>
+  </div>
+</section>
+      <section id="receita2" class="px-6 py-10">
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-6 items-center">
+  <div class="md:w-1/2">
+    <img 
+      src="./assets/pan2.jpg" 
+      alt="bruaca"
+      class="rounded-lg shadow-md w-full"
+    />
+  </div>
+  <div class="md:w-1/2">
+    <h1 class="text-2xl font-bold mb-3">
+      Receita 2: Bruaca da mãe
+    </h1>
+    <h2 class="font-semibold mb-2">Ingredientes</h2>
+    <ul class="list-disc ml-5 space-y-1 mb-3">
+      <li>5 colheres de sopa de farinha de trigo</li>
+      <li>2 colheres de sopa de açucar</li>
+      <li>1 colher de sopa de cacau em pó</li>
+      <li>Agua</li>
+    </ul>
+    <p>
+      Essa receita de panqueca foi minha mãe que me ensinou, bem facil mesmo, só misturar tudo e assar numa frigideira a fogo baixo, unte ela com um pouco de azeite ou oleo para não grudar, 2 minutos de um lado e 1 minuto e meio do outro, eu gosto de colocar uma barrinha de chocolate e cobrir com a massa antes de virar, pra rechear a bruaca.
+    </p>
+  </div>
+</div>
       </section>
-      <section id="receita2" class="mx-12">
-        <h1>Receita 2: Bruaca da mãe</h1>
-        <h2>Igredientes</h2>
-        <div>
-          <img src="./assets/pan1.jpg" alt="bruaca" />
-          <img src="./assets/pan2.jpg" alt="bruacadentro" />
-        </div>
-        <ul>
-          5 colheres de sopa de farinha de trigo
-        </ul>
-        <ul>
-          2 colheres de sopa de açicar
-        </ul>
-        <ul>
-          1 colher de sopa de cacau em pó
-        </ul>
-        <ul>
-          Agua
-        </ul>
-        <p>
-          Essa receita de panqueca foi minha mãe que me ensinou, bem facil
-          mesmo, só misturar tudo e assar numa frigideira a fogo baixo, unte ela
-          com um pouco de azeite ou oleo para não grudar, 2 minutos de um lado e
-          1 minuto e meio do outro, eu gosto de colocar uma barrinha de
-          chocolate e cobrir com a massa antes de virar, pra rechear a bruaca.
-        </p>
-      </section>
-      <section id="suareceita" class="mx-12">
-        <h1>A sua receita</h1>
-        <p>
-          Eu adoraria conhecer alguma receita rapida e simples assim que voce
-          saiba, use a caixa abaixo para compartilhar! Ou deixe um comentário do
-          que achou.
-        </p>
-        <div><textarea name="comentario" id="comentario"></textarea></div>
-      </section>
-      <button onclick="topFunction()" id="btnTopo" title="Voltar ao topo">
+      <section id="suareceita" class="px-6 py-10 text-center">
+  <h1 class="text-2xl md:text-3xl font-bold mb-4">
+    A sua receita
+  </h1>
+  <p class="mb-4">
+    Eu adoraria conhecer alguma receita que você saiba e queira compartilhar, ou o que achou das minhas receitas se teve a oportunidade de tentar.
+  </p>
+  <div class="mb-4">
+    <textarea
+      name="comentario"
+      id="comentario"
+      class="w-full md:w-2/3 h-32 p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+      placeholder="Digite sua receita ou comentário"
+    ></textarea>
+  </div>
+  <button 
+    onclick="enviarReceita()"
+    class="bg-green-500 text-white px-6 py-2 rounded-lg shadow hover:bg-green-600 transition">
+    Enviar Receita
+  </button>
+  <p id="mensagem" class="mt-4 text-green-600 font-semibold hidden">
+    Receita enviada com sucesso! 
+  </p>
+  <div id="listaReceitas" class="mt-6 text-left max-w-xl mx-auto"></div>
+</section>
+      <button
+        onclick="topFunction()"
+        id="btnTopo"
+        title="Voltar ao topo"
+        class="fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 transition"
+      >
         ↑
       </button>
     </main>
-    <footer>2026</footer>
+    <footer class="text-center py-6 bg-white shadow-inner">
+      Fortaleza - CE, 2026
+    </footer>
+
     <script src="./landingpage.js"></script>
   </body>
 </html>
